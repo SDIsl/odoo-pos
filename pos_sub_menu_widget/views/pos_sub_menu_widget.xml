@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 FactorLibre - Ismael Calvo <ismael.calvo@factorlibre.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+    <data>
+
+        <template id="assets_backend" name="pos_sub_menu_widget_assets"
+                  inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script src="/pos_sub_menu_widget/static/src/js/pos_sub_menu_widget.js"
+                        type="text/javascript"></script>
+            </xpath>
+        </template>
+
+        <template id="styles_sub_menu_widget" name="POS Return Products" inherit_id="point_of_sale.index">
+            <xpath expr="//head" position="inside">
+                <link rel="stylesheet" href="/pos_sub_menu_widget/static/src/css/pos_sub_menu_widget.css"/>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

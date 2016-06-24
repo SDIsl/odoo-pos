@@ -1,0 +1,72 @@
+/* © 2015 FactorLibre - Ismael Calvo <ismael.calvo@factorlibre.com>
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+ */
+
+.great-screen .content {
+    position: relative;
+    margin: 16px;
+    height: 100%;
+}
+.sub-menu {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    vertical-align: top;
+    height: 49px;
+    background-color: #d3d3d3;
+    border-bottom: 1px solid #c7c7c7;
+    padding: 4px 0 1px 15px;
+}
+.sub-menu.left {
+    width: 440px;
+    border-right: 1px solid #c7c7c7;
+}
+.sub-menu.right{
+    width: 100%;
+}
+.sub-menu button {
+    height: 40px;
+    background-color: #8B8B8B;
+    color: #fff;
+    font-size: 12px;
+}
+.sub-menu button:active {
+    background-color: #bbb;
+    color: #8B8B8B;
+    border-color: #8B8B8B;
+}
+.great-screen table {
+    font-size: 16px;
+    width: 100%;
+    line-height: 40px;
+    text-align: left;
+}
+.great-screen thead {
+    border-top: 1px dashed #d7d7d7;
+}
+.great-screen thead > tr {
+    background: rgb(247,247,247);
+}
+.great-screen tr {
+    transition: all 150ms linear;
+    background: rgb(220,220,220);
+    cursor: pointer;
+}
+.great-screen tbody tr:nth-of-type(even) {
+    background: rgb(240,240,240);
+}
+.great-screen th,
+.great-screen td {
+    padding: 0px 8px;
+}
+.great-screen .scroll{
+    clear: both;
+    display: block;
+    height: 550px;
+    overflow-y: auto;
+}

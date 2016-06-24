@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_sub_menu_widget
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-07 09:05+0000\n"
+"PO-Revision-Date: 2016-03-07 09:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_sub_menu_widget
+#. openerp-web
+#: code:addons/TPV-v8/pos_sub_menu_widget/static/src/xml/pos_sub_menu_widget.xml:27
+#: code:addons/pos_sub_menu_widget/static/src/xml/pos_sub_menu_widget.xml:27
+#, python-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: pos_sub_menu_widget
+#. openerp-web
+#: code:addons/TPV-v8/pos_sub_menu_widget/static/src/xml/pos_sub_menu_widget.xml:30
+#: code:addons/pos_sub_menu_widget/static/src/xml/pos_sub_menu_widget.xml:30
+#, python-format
+msgid "Search Order"
+msgstr "Buscar pedido"
+

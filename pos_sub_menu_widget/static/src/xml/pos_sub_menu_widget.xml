@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 FactorLibre - Ismael Calvo <ismael.calvo@factorlibre.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<template>
+
+    <t t-name="LeftSubMenuWidget">
+        <div class="sub-menu left">
+        </div>
+    </t>
+
+    <t t-name="CleanRightScreen">
+        <div class="great-screen screen">
+            <div class="screen-content">
+                <header class="sub-menu right">
+                </header>
+                <section class="content"></section>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="GreatRightScreen">
+        <div class="great-screen screen">
+            <div class="screen-content">
+                <header class="sub-menu right">
+                    <button class="cancel">
+                        <i class="fa fa-angle-double-left"></i> Cancel
+                    </button>
+                    <span class="searchbox">
+                        <input placeholder="Search Order"/>
+                    </span>
+                </header>
+                <section class="content"></section>
+            </div>
+        </div>
+    </t>
+
+</template>
