@@ -2,22 +2,6 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============
-{module_title}
-==============
-
-
-
-
-
-
-
-[image]: https://img.shields.io/badge/licence-AGPL--3-blue.svg "License: AGPL-3" width=50px height=10px
-
-   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
-   :alt: License: AGPL-3
-
-
 =====================
 POS Change Order Name
 =====================
@@ -26,10 +10,10 @@ Descripción del módulo:
 =======================
 * Adapta la secuencia del terminal punto de venta a la legislación Española (facturas simplificadas con numeración correlativa)
 * Mantiene la funcionalidad offline del point_of_sale, en caso de pérdida de conexión se puede seguir haciendo ventas sin alterar la secuencia.
-** Cuando vuelve la conexión se pulsa al botón de sincronizar y se graban los pedidos en el backend.
-** Los pedidos hechos sin conexión se guardan en caché y se pueden recuperar aún cerrando el navegador o apagando el ordenador.
-*** Hay que tener en cuenta que al sincronizar hay que utilizar el mismo navegador (no se puede desde la versión de incógnito).
-*** Muy importante no borrar la caché, ya que perderíamos esos pedidos.
+ * Cuando vuelve la conexión se pulsa al botón de sincronizar y se graban los pedidos en el backend.
+ * Los pedidos hechos sin conexión se guardan en caché y se pueden recuperar aún cerrando el navegador o apagando el ordenador.
+  * Hay que tener en cuenta que al sincronizar hay que utilizar el mismo navegador (no se puede desde la versión de incógnito).
+  * Muy importante no borrar la caché, ya que perderíamos esos pedidos.
 
 Instalación:
 ============
