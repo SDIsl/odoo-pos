@@ -16,6 +16,7 @@
     "depends": [
         'point_of_sale',
         'pos_sub_menu_widget',
+        'pos_simplified_invoice',
     ],
     'data': [
         'security/ir.model.access.csv',
