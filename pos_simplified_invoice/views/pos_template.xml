@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="pos_simplified_invoice_assets_backend"
+                  name="POS Simplified Invoice"
+                  inherit_id="point_of_sale.assets_backend">
+            <xpath expr="." position="inside">
+                <script src="/pos_simplified_invoice/static/src/js/main.js"
+                        type="text/javascript"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>
