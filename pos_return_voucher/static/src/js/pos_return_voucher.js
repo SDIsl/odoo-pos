@@ -86,7 +86,6 @@ openerp.pos_return_voucher = function (instance, local) {
             return picked_voucher_ids
         },
         export_as_JSON: function () {
-            console.log('jcm override export as jason jcm <<<<<<<<')
             var orderLines, paymentLines;
             orderLines = [];
             (this.get('orderLines')).each(_.bind(function (item) {
@@ -190,7 +189,6 @@ openerp.pos_return_voucher = function (instance, local) {
                     /**block when return products*/
                     if (self.pos.pos_widget.action_bar.buttons.validation.hide == true) {
                         currentOrder.removePaymentline(line_for_voucher)
-                        console.log("jcm block when return products")
                     } else {
                         self.pos.pos_widget.voucher_screen.payment_line = line_for_voucher
                         self.pos.pos_widget.screen_selector.set_current_screen('voucherscreen')
@@ -245,9 +243,8 @@ openerp.pos_return_voucher = function (instance, local) {
             // Hide 'Validate' & 'Invoice' buttons if return order
             var currentOrder = this.pos.get('selectedOrder');
             if (currentOrder.getTotalTaxIncluded() < 0) {
-                //add jcm routine
+
                 if (currentOrder.selected_paymentline) {
-                    console.log("hay seleccionado una linea de pagocon: " + currentOrder.selected_paymentline.amount)
                     this.pos_widget.action_bar.set_button_disabled('return_voucher', true);
                     this.pos_widget.action_bar.set_button_disabled('validation', false);
                     this.pos_widget.action_bar.set_button_disabled('invoice', false);
@@ -263,7 +260,6 @@ openerp.pos_return_voucher = function (instance, local) {
 
         back: function () {
             this._super();
-            console.log("back metodo srceen selector")
             var currentOrder = this.pos.get('selectedOrder');
             if (currentOrder.getTotalTaxIncluded() < 0) {
                 //reset order lines & trigger current order
@@ -296,7 +292,7 @@ openerp.pos_return_voucher = function (instance, local) {
 
             var posVoucherModel = new instance.web.Model('pos.voucher')
 
-            /***init modify jcm**/
+
             var partner_id = currentOrder.get_client() || false
             var pos_order_ref = this.pos.pos_widget.return_products_popup.order.ref;
             var barcode_voucher = config.barcode_voucher.replace("*", "")
@@ -304,7 +300,7 @@ openerp.pos_return_voucher = function (instance, local) {
                 [vals, pos_order_ref,
                     barcode_voucher,
                     partner_id.id]) //pass ref order also
-            /**end modify jcm***/
+
                 .then(function (result) {
                     return result;
                 }).fail(function (error, event) {
@@ -336,7 +332,6 @@ openerp.pos_return_voucher = function (instance, local) {
             var currentOrder = this.pos.get('selectedOrder');
 
             if (self.pos.pos_widget.payment_screen.is_locked_order()) {
-                console.log("jcm current order is locked aborting operation...")
                 return;
             }
 
@@ -458,13 +453,12 @@ openerp.pos_return_voucher = function (instance, local) {
             var currentOrder = this.pos.get('selectedOrder');
 
             if (self.pos.pos_widget.payment_screen.is_locked_order()) {
-                console.log("jcm current order is locked aborting operation... from validate_return_voucher()")
                 return;
             }
 
             var create_new_voucher = false;
             var voucher = false;
-            //jcm add property json order
+
             currentOrder['return_mode'] = "voucher";
             var paymentLines = currentOrder.get('paymentLines');
             //if (paymentLines.length > 1) { old statement
@@ -507,7 +501,6 @@ openerp.pos_return_voucher = function (instance, local) {
                     ids.push({'id': line.id, 'qty': line.qty})
                 });
                 ReturnLinesModel.call('add_line_return_qty_ids', [ids]).then(function (res) {
-                    console.log(res + "jcm <<<<<<<<<<<<<<< new pos.order.line.return.id")
                 });
 
             } else {
@@ -584,7 +577,6 @@ openerp.pos_return_voucher = function (instance, local) {
             var search_timeout = null;
 
             this.$el.find('.searchbox input').on('keyup', function () {
-                console.log("jcm keyup searchbox voucher screen <<<<<<" + " value:" + this.value)
                 clearTimeout(search_timeout);
 
                 var query = this.value;
