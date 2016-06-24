@@ -36,9 +36,9 @@ Problemas conocidos:
 ** Por las mismas causas que hemos comentado en el caso de los dos navegadores.
 
 
- Mejoras / Hoja de ruta:
- =======================
- * Limitar a una sola sesión por usuario (para evitar arrancar el TPV en dos navegadores/puestos diferentes)
+Mejoras / Hoja de ruta:
+=======================
+* Limitar a una sola sesión por usuario (para evitar arrancar el TPV en dos navegadores/puestos diferentes)
  
 
 Updates
