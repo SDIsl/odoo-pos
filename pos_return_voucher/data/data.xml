@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+        <data noupdate="1">
+            <!-- ############## sequence ###### -->
+            <record id="sequence_account_voucher_journal" model="ir.sequence">
+                <field name="name">Account Voucher sequence</field>
+                <field name="active" eval="True"/>
+                <field eval="4" name="padding"/>
+                <field eval="1" name="number_next_actual"/>
+                <field eval="1" name="number_increment"/>
+                <field eval="'no_gap'" name="implementation"/>
+                <field name="prefix">VALE/%(year)s/</field>
+            </record>
+
+            <!-- ################# journal ################ -->
+            <record id="account_voucher_journal" model="account.journal">
+                <field name="name">Vale Devolución</field>
+                <field name="code">VALES</field>
+                <field name="type">cash</field>
+
+                <field name="sequence_id" ref="sequence_account_voucher_journal"/>
+                <field name="default_debit_account_id" search="[('code', 'like', '438000')]"/>
+                <field name="default_credit_account_id" search="[('code', 'like', '438000')]"/>
+                <field name="user_id" ref="base.user_root"/>
+
+                <field name="journal_user" eval="True"/>
+                <field name="entry_posted" eval="True"/>
+                <field name="update_posted" eval="True"/>
+                <field name="group_invoice_lines" eval="True"/>
+                <field name="voucher_journal" eval="True"/>
+            </record>
+
+            <!-- #################pos config ################ -->
+            <record id="point_of_sale.pos_config_main" model="pos.config">
+                <field name="journal_ids" eval="[(4, ref('pos_return_voucher.account_voucher_journal'))]" />
+            </record>
+        </data>
+</openerp>

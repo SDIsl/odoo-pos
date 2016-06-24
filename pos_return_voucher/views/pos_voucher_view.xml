@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 FactorLibre - Ismael Calvo <ismael.calvo@factorlibre.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+    <data>
+
+        <record id="pos_voucher_tree" model="ir.ui.view">
+            <field name="name">pos.voucher.tree</field>
+            <field name="model">pos.voucher</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree colors="gray:state=='expired'" create="0">
+                    <field name="name"/>
+                    <field name="amount"/>
+                    <field name="due_date"/>
+                    <field name="partner_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pos_voucher_form" model="ir.ui.view" >
+            <field name="name">pos.voucher.form</field>
+            <field name="model">pos.voucher</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="POS Voucher" create="0">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <h1>
+                            <label string="POS Voucher"/>
+                            <field name="name"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="amount" attrs="{'readonly': [('name', '>', 0)]}"/>
+                            </group>
+                            <group>
+                                <field name="due_date" attrs="{'readonly': [('state', '=', 'expired')]}"/>
+                                <field name="partner_id" attrs="{'readonly': [('state', '=', 'expired')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Voucher History">
+                                <field name="voucher_history_lines">
+                                    <tree string="Voucher History Lines" editable="false"
+                                            colors="tomato:operation_type=='spend'">
+                                        <field name="amount"/>
+                                        <field name="date"/>
+                                        <field name="pos_order_id"/>
+                                        <field name="operation_type" insvisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="pos_voucher_action" model="ir.actions.act_window">
+            <field name="name">Vouchers</field>
+            <field name="res_model">pos.voucher</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="domain">[('due_date', '>=', datetime.datetime.today())]</field> -->
+        </record>
+
+        <menuitem name="Vouchers"
+            id="pos_voucher_menu"
+            parent="point_of_sale.menu_point_root"
+            groups="point_of_sale.group_pos_manager,point_of_sale.group_pos_user"
+            sequence="20"/>
+
+        <menuitem action="pos_voucher_action" id="pos_voucher"
+            parent="pos_voucher_menu"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 FactorLibre - Ismael Calvo <ismael.calvo@factorlibre.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_pos_config_form">
+            <field name="name">pos.config.form.view</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_config_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@string='Receipt']" position="after">
+                    <group string="Voucher">
+                        <field name="vouchers_expire"/>
+                        <field name="voucher_validity_period"
+                            attrs="{'invisible': [('vouchers_expire', '=', False)], 'required': [('vouchers_expire', '=', True)]}"/>
+                    </group>
+                </xpath>
+                <field name="barcode_discount" position="after">
+                    <field name="barcode_voucher"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

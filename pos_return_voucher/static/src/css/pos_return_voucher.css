@@ -1,0 +1,94 @@
+/* © 2015 FactorLibre - Ismael Calvo <ismael.calvo@factorlibre.com>
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+ */
+
+.hidden {
+    display: none;
+}
+.voucher-barcode{
+    margin: 1em 0 0 0;
+    text-align: center;
+}
+.voucher-barcode figcaption {
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    color: #000;
+}
+.voucher-barcode img {
+    position: relative;
+    left: -50px;
+}
+.pos .modal-dialog .popup.popup-voucher {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    margin: 0 auto;
+    top: 10%;
+    left: 0;
+    padding: 1em 2em;
+}
+.popup.popup-voucher h1 {
+    font-size: 1.2em;
+}
+.popup.popup-voucher header {
+    display: block;
+}
+.popup.popup-voucher .searchbox {
+    position: relative;
+    float: right;
+
+}
+.popup.popup-voucher .order-info {
+    font-size: 0.6em;
+    color: #666;
+}
+.popup.popup-voucher table {
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: normal;
+    text-align: center;
+}
+.popup.popup-voucher table *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.popup.popup-voucher table th:first-of-type, .popup.popup-voucher table td:first-of-type {
+    text-align: left;
+}
+.popup.popup-voucher table td, .popup.popup-voucher table th{
+    padding: 0.5em;
+}
+.popup.popup-voucher table thead tr {
+    background: #ccc;
+}
+.popup.popup-voucher table tbody tr:nth-of-type(even) {
+    background: #ddd;
+}
+.popup.popup-voucher .voucher-line{
+    cursor: pointer;
+}
+.popup.popup-voucher .voucher-line:active{
+    background-color: #7F82AC;
+    color: #fff;
+}
+.popup.popup-voucher .disabled{
+    cursor: default;
+    color: red;
+}
+.scroll {
+    clear: both;
+    display: block;
+    height: 342px;
+    overflow-y: auto;
+}
+
+@media print {
+    .voucher-barcode img {
+        position: relative;
+        left: -67px;
+    }
+}

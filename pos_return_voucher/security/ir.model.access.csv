@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"acess_responsible_order_line_return_qty_ids","pos.order.line.return.quantity.ids","pos_return_voucher.model_pos_order_line_return_quantity_ids","base.group_user",1,1,1,0
+"acess_users_pos_voucher","model.pos.voucher","pos_return_voucher.model_pos_voucher","base.group_user",1,1,1,0
+"acess_users_pos_voucher_history_line","pos.voucher.history_line","pos_return_voucher.model_pos_voucher_history_line","base.group_user",1,1,1,0

@@ -1,0 +1,352 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_return_voucher
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-02 11:36+0000\n"
+"PO-Revision-Date: 2016-03-02 11:36+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_return_voucher
+#: help:pos.config,voucher_validity_period:0
+msgid "(In days) Period of validity of a voucher. If a voucher is recharged, its due date is updated."
+msgstr "Periodo de validez de un vale (En días). Si un vale se recarga, su fecha de expiración se actualiza."
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:69
+#: field:pos.voucher.history_line,amount:0
+#, python-format
+msgid "Amount"
+msgstr "Importe"
+
+#. module: pos_return_voucher
+#: field:pos.voucher,amount:0
+msgid "Amount Available"
+msgstr "Cantidad disponible"
+
+#. module: pos_return_voucher
+#: selection:pos.voucher,state:0
+msgid "Available"
+msgstr "Disponible"
+
+#. module: pos_return_voucher
+#: field:pos.config,barcode_voucher:0
+msgid "Barcode for Voucher"
+msgstr "Código de barras para el vale"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:229
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:287
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:454
+#, python-format
+msgid "Can not execute this action because the POS is currently offline"
+msgstr "No se puede ejecutar la acción porque el TPV está offline"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:78
+#, python-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:133
+#, python-format
+msgid "Choose a voucher"
+msgstr "Seleccionar vale"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:68
+#: field:pos.voucher,name:0
+#, python-format
+msgid "Code"
+msgstr "Código"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:228
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:286
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:453
+#, python-format
+msgid "Connection error"
+msgstr "Error de conexión"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:149
+#, python-format
+msgid "Create Voucher"
+msgstr "Crear Vale"
+
+#. module: pos_return_voucher
+#: field:pos.order.line.return.quantity.ids,create_uid:0
+#: field:pos.voucher,create_uid:0
+#: field:pos.voucher.history_line,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: pos_return_voucher
+#: field:pos.order.line.return.quantity.ids,create_date:0
+#: field:pos.voucher,create_date:0
+#: field:pos.voucher.history_line,create_date:0
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:28
+#, python-format
+msgid "Current Amount:"
+msgstr "Importe actual:"
+
+#. module: pos_return_voucher
+#: field:pos.voucher.history_line,date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:70
+#, python-format
+msgid "Due Date"
+msgstr "Fecha de expiración"
+
+#. module: pos_return_voucher
+#: field:pos.voucher,due_date:0
+msgid "Due date"
+msgstr "Fecha de expiración"
+
+#. module: pos_return_voucher
+#: code:addons/pos_return_voucher/models/pos_voucher.py:57
+#, python-format
+msgid "Due date must be greater than the creation date"
+msgstr "La fecha de expiración tiene que ser mayor que la fecha de creación"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:33
+#, python-format
+msgid "Due date:"
+msgstr "Fecha de expiración:"
+
+#. module: pos_return_voucher
+#: selection:pos.voucher,state:0
+msgid "Expired"
+msgstr "Expirado"
+
+#. module: pos_return_voucher
+#: field:pos.order.line.return.quantity.ids,id:0
+#: field:pos.voucher,id:0
+#: field:pos.voucher.history_line,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_return_voucher
+#: selection:pos.voucher.history_line,operation_type:0
+msgid "Input"
+msgstr "Entrada"
+
+#. module: pos_return_voucher
+#: field:pos.order.line,returned:0
+msgid "Is returned completely?"
+msgstr "¿Se ha devuelto completamente?"
+
+#. module: pos_return_voucher
+#: model:ir.model,name:pos_return_voucher.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: pos_return_voucher
+#: field:account.journal,voucher_journal:0
+msgid "Journal for vouchers"
+msgstr "Diario para vales"
+
+#. module: pos_return_voucher
+#: field:pos.order.line.return.quantity.ids,write_uid:0
+#: field:pos.voucher,write_uid:0
+#: field:pos.voucher.history_line,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: pos_return_voucher
+#: field:pos.order.line.return.quantity.ids,write_date:0
+#: field:pos.voucher,write_date:0
+#: field:pos.voucher.history_line,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: pos_return_voucher
+#: field:pos.order.line.return.quantity.ids,line_id:0
+msgid "Line id"
+msgstr "ID de línea"
+
+#. module: pos_return_voucher
+#: model:ir.model,name:pos_return_voucher.model_pos_order_line
+msgid "Lines of Point of Sale"
+msgstr "Líneas del Terminal Punto de Venta"
+
+#. module: pos_return_voucher
+#: field:pos.voucher.history_line,operation_type:0
+msgid "Operation Type"
+msgstr "Tipo de operación"
+
+#. module: pos_return_voucher
+#: model:ir.model,name:pos_return_voucher.model_pos_voucher
+#: view:pos.voucher:pos_return_voucher.pos_voucher_form
+msgid "POS Voucher"
+msgstr "Vale TPV"
+
+#. module: pos_return_voucher
+#: model:ir.model,name:pos_return_voucher.model_pos_voucher_history_line
+msgid "POS Voucher History Line"
+msgstr "Historial del vale del TPV"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:71
+#: field:pos.voucher,partner_id:0
+#, python-format
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: pos_return_voucher
+#: code:addons/pos_return_voucher/models/pos_voucher.py:183
+#, python-format
+msgid "Period must be greater than zero"
+msgstr "El periodo tiene que ser mayor que cero"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:16
+#, python-format
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#. module: pos_return_voucher
+#: field:pos.order.line.return.quantity.ids,qty_returned:0
+msgid "Qty returned"
+msgstr "Cantidad devuelta"
+
+#. module: pos_return_voucher
+#: field:pos.voucher.history_line,pos_order_id:0
+msgid "Related Order"
+msgstr "Pedido relacionado"
+
+#. module: pos_return_voucher
+#: field:pos.voucher.history_line,voucher_id:0
+msgid "Related Voucher"
+msgstr "Vale relacionado"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:29
+#, python-format
+msgid "Return Voucher"
+msgstr "Vale de devolución"
+
+#. module: pos_return_voucher
+#: field:pos.order.line,return_line_qty_ids:0
+msgid "Return line qty ids"
+msgstr "IDs de las líneas devueltas"
+
+#. module: pos_return_voucher
+#: model:ir.model,name:pos_return_voucher.model_pos_order_line_return_quantity_ids
+msgid "Return pos order line ids"
+msgstr "IDs de las líneas devueltas"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:61
+#, python-format
+msgid "Search Voucher"
+msgstr "Buscar vales"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:18
+#, python-format
+msgid "Shop:"
+msgstr "Tienda:"
+
+#. module: pos_return_voucher
+#: selection:pos.voucher.history_line,operation_type:0
+msgid "Spend"
+msgstr "Gasto"
+
+#. module: pos_return_voucher
+#: field:pos.voucher,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: pos_return_voucher
+#: code:addons/pos_return_voucher/models/pos_voucher.py:70
+#, python-format
+msgid "The amount is required"
+msgstr "Se requiere importe"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:307
+#, python-format
+msgid "There can only be one payment line in returns. Please, select one and delete the others."
+msgstr "Sólo puede haber una línea de pago en las devoluciones. Por favor, seleccione una y borre las otras."
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/xml/pos_return_voucher.xml:17
+#, python-format
+msgid "User:"
+msgstr "Usuario:"
+
+#. module: pos_return_voucher
+#: view:pos.config:pos_return_voucher.view_pos_config_form
+msgid "Voucher"
+msgstr "Vale"
+
+#. module: pos_return_voucher
+#. openerp-web
+#: code:addons/pos_return_voucher/static/src/js/pos_return_voucher.js:306
+#, python-format
+msgid "Voucher Error"
+msgstr "Error en el vale"
+
+#. module: pos_return_voucher
+#: view:pos.voucher:pos_return_voucher.pos_voucher_form
+#: field:pos.voucher,voucher_history_lines:0
+msgid "Voucher History"
+msgstr "Historial Vale"
+
+#. module: pos_return_voucher
+#: view:pos.voucher:pos_return_voucher.pos_voucher_form
+msgid "Voucher History Lines"
+msgstr "Líneas del historial del vale"
+
+#. module: pos_return_voucher
+#: field:pos.config,voucher_validity_period:0
+msgid "Voucher Validity Period"
+msgstr "Periodo de validez del vale"
+
+#. module: pos_return_voucher
+#: model:ir.actions.act_window,name:pos_return_voucher.pos_voucher_action
+#: model:ir.ui.menu,name:pos_return_voucher.pos_voucher
+#: model:ir.ui.menu,name:pos_return_voucher.pos_voucher_menu
+msgid "Vouchers"
+msgstr "Vales"
+
+#. module: pos_return_voucher
+#: field:pos.config,vouchers_expire:0
+msgid "Vouchers Expire?"
+msgstr "¿Expiran los vales?"
+
