@@ -1,0 +1,89 @@
+/* © 2015 FactorLibre - Ismael Calvo <ismael.calvo@factorlibre.com>
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+ */
+
+.pos .modal-dialog .popup.popup-order {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80%;
+    height: 70%;
+    position: relative;
+    margin: 0 auto;
+    top: 10%;
+    left: 0;
+    padding: 1em 2em;
+}
+.popup.popup-order h1 {
+    font-size: 1.2em;
+}
+.popup.popup-order .order-info {
+    font-size: 0.6em;
+    color: #666;
+}
+.popup.popup-order table {
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: normal;
+    text-align: center;
+}
+.popup.popup-order table *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.popup.popup-order table th:first-of-type, .popup.popup-order table td:first-of-type {
+    text-align: left;
+}
+.popup.popup-order table td, .popup.popup-order table th{
+    /*border: 1px dotted #333;*/
+    padding: 0.5em;
+}
+.popup.popup-order .fa-times {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: crimson;
+}
+.popup.popup-order .fa-times:active {
+    color: #555;
+}
+.popup.popup-order table thead tr {
+    background: #ccc;
+}
+.popup.popup-order table tr {
+    height: 10px;
+}
+.popup.popup-order table tbody tr:nth-of-type(even) {
+    background: #ddd;
+}
+.qty {
+    position: relative
+}
+.qty .fa {
+    font-size: 2em;
+    position: absolute;
+    top: -0.2em;
+    color: #ccc;
+    color: #7F82AC;
+    cursor: pointer;
+}
+.qty .fa.active {
+    color: #7F82AC;
+}
+.qty .fa:active {
+    color: #555;
+}
+.qty .plus {
+    left: -1.1em;
+}
+.qty .minus {
+    right: -1.1em;
+}
+.popup.popup-order table tr.deleted {
+    transition: all 1000ms linear;
+    opacity: 0;
+}
+
+.popup-order div.footer{
+    position: relative !important;
+}

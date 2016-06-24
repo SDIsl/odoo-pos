@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="pos_return_products_pos_order_tree" model="ir.ui.view">
+            <field name="name">pos.return.products.pos.order.tree</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="is_return"/>
+                </field>
+
+                <xpath expr="//tree[@string='POS Orders']" position="attributes">
+                    <attribute name="colors">tomato:is_return==True;</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+
+</openerp>

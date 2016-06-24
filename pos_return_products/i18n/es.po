@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_return_products
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-02 11:32+0000\n"
+"PO-Revision-Date: 2016-03-02 11:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/js/pos_return_products.js:107
+#, python-format
+msgid "Can not execute this action because the POS is currently offline"
+msgstr "No se puede ejecutar esta acción porque el TPV está desconectado"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:55
+#, python-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/js/pos_return_products.js:128
+#, python-format
+msgid "Choose the products and quantity to return"
+msgstr "Escoja los productos y la cantidad a devolver"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/js/pos_return_products.js:106
+#, python-format
+msgid "Connection error"
+msgstr "Error de conexión"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:15
+#, python-format
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:14
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:67
+#, python-format
+msgid "Delete this product from the return"
+msgstr "Borrar este producto de la devolución"
+
+#. module: pos_return_products
+#: field:pos.order,is_return:0
+msgid "Is return"
+msgstr "Devuelto"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:12
+#, python-format
+msgid "Order"
+msgstr "Pedido"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:41
+#, python-format
+msgid "Order Ref:"
+msgstr "Referencia de pedido:"
+
+#. module: pos_return_products
+#: model:ir.model,name:pos_return_products.model_pos_order
+msgid "Point of Sale"
+msgstr "Terminal Punto de Venta"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:46
+#, python-format
+msgid "Product"
+msgstr "Producto"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:48
+#, python-format
+msgid "Qty"
+msgstr "Ctd."
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:56
+#, python-format
+msgid "Return"
+msgstr "Devolver"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/js/pos_return_products.js:32
+#, python-format
+msgid "Returns"
+msgstr "Devoluciones"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:13
+#, python-format
+msgid "Ticket Number"
+msgstr "Número de ticket"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:16
+#, python-format
+msgid "Total Amount"
+msgstr "Importe total"
+
+#. module: pos_return_products
+#. openerp-web
+#: code:addons/pos_return_products/static/src/xml/pos_return_products.xml:47
+#, python-format
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: pos_return_products
+#: view:pos.order:pos_return_products.pos_return_products_pos_order_tree
+msgid "tomato:is_return==True;"
+msgstr "tomato:is_return==True;"
+

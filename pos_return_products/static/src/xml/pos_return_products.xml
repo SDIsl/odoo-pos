@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 FactorLibre - Ismael Calvo <ismael.calvo@factorlibre.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<template>
+
+    <t t-name="OrdersReturnTable">
+        <div class="scroll">
+            <table class="order-list">
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Ticket Number</th>
+                        <th>Date</th>
+                        <th>Customer</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody class="order-list-contents">
+                </tbody>
+            </table>
+        </div>
+    </t>
+
+    <t t-name="LoadReturnOrderLine">
+        <tr class="order-line" t-att-data-order-id="order.id">
+            <td><t t-esc="order.name"/></td>
+            <td><t t-esc="order.pos_reference"/></td>
+            <td><t t-esc="order.date_order"/></td>
+            <td t-if="order.partner_id"><t t-esc="order.partner_id[1]"/></td>
+            <td t-if="!order.partner_id"></td>
+            <td class="total"><t t-esc="widget.format_currency(order.amount_total)"/></td>
+        </tr>
+    </t>
+
+    <t t-name="ReturnProductsPopupWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-order scrollable-y touch-scrollable">
+                <header>
+                    <h1 class="message"><t t-esc=" widget.message || 'Select' " /></h1>
+                    <p class="order-info">Order Ref: <span class="order-ref"></span></p>
+                </header>
+
+                <table class="product-list">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Unit Price</th>
+                            <th>Qty</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="product-list-contents"></tbody>
+                </table>
+                <div class="footer">
+                    <div class="button cancel">Cancel</div>
+                    <div class="button confirm">Return</div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="LoadProductLine">
+        <tr class="product-line" t-att-data-orderline-id="orderline.id">
+            <td><t t-esc="orderline.product_id[1]"/></td>
+            <td><t t-esc="widget.format_currency(orderline.price_unit)"/></td>
+            <td><span class="qty"><t t-esc="orderline.qty"/></span></td>
+            <td><i class="del-btn fa fa-times" title="Delete this product from the return"></i></td>
+        </tr>
+    </t>
+
+</template>
