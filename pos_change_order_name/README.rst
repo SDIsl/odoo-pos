@@ -18,6 +18,7 @@ Descripción del módulo:
 Instalación:
 ============
 Para instalar este módulo necesitas
+
 * point_of_sale (Odoo addon)
 
 Configuración:
