@@ -3,8 +3,9 @@
 #
 #    OpenERP, Open Source Management Solution
 #    This module copyright :
-#        (c) 2015 SDI
+#        (c) 2016 SDI
 #                 Juan Carlos Montoya <jcmontoya@sdi.es>
+#                 Javier Garcia Panach <jgarcia@sdi.es>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -27,7 +28,7 @@
         This module change sequence id Frontend to backend order correlative
         name""",
 
-    'author': "Juan Carlos Montoya",
+    'author': "Juan Carlos Montoya, Javier Garcia Panach",
     'website': "https://github.com/SDIsl",
     'category': 'Pos',
     'version': '0.1',
