@@ -28,11 +28,11 @@ Configuración:
 Problemas conocidos:
 ====================
 * No se puede iniciar sesión con el mismo usuario en navegadores diferentes:
-** En el caso de hacer dos pedidos a la vez desde los dos navegadores (con un segundo de diferencia) hace un salto de secuencia.
-** También se producen saltos en la secuencia al sincronizar pedidos desde el botón tras modo offline si se pulsa a la vez desde los dos navegadores, incluso hay pedidos que no llegan a crearse en el backend.
-** En modo offline, si se hacen ventas desde dos puestos, dos clientes se podrían llevar el mismo número de factura simplificada, aunque en el backend mantenga la secuencia cuando recupere la conexión. 
+ * En el caso de hacer dos pedidos a la vez desde los dos navegadores (con un segundo de diferencia) hace un salto de secuencia.
+ * También se producen saltos en la secuencia al sincronizar pedidos desde el botón tras modo offline si se pulsa a la vez desde los dos navegadores, incluso hay pedidos que no llegan a crearse en el backend.
+ * En modo offline, si se hacen ventas desde dos puestos, dos clientes se podrían llevar el mismo número de factura simplificada, aunque en el backend mantenga la secuencia cuando recupere la conexión. 
 * No se puede iniciar sesión con el mismo usuario en dos puestos distintos:
-** Por las mismas causas que hemos comentado en el caso de los dos navegadores.
+ * Por las mismas causas que hemos comentado en el caso de los dos navegadores.
 
 
 Mejoras / Hoja de ruta:
@@ -42,7 +42,6 @@ Mejoras / Hoja de ruta:
 
 Updates
 =======
-
 * May 2016 : First version
 
 Bug Tracker
@@ -59,8 +58,8 @@ Credits
 Contributors
 ------------
 
-* Juan Carlos Montoya Chamba <https://github.com/jcarlosmontoya> `juancarlos.montoya.chamba@gmail.com`
-* Javier García-Panach <https://github.com/JGarcia-Panach> `panaka7@gmail.com`
+* SDI Soluciones Informaticas - Juan Carlos Montoya <https://github.com/jcarlosmontoya> `jcmontoya@sdi.es`
+* SDI Soluciones Informaticas - Javier Garcia Panach <https://github.com/JGarcia-Panach> `jgarcia@sdi.es`
 
 
 Maintainer
