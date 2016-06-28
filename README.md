@@ -5,6 +5,10 @@ pos_change_order_name
 ------------------------
 This module keeps the sequence number in POS Order (Correlative)
 
+pos_invoice_reconcile
+------------------------
+This module automatically reconciles invoiced orders (close session)
+
 pos_return_products
 -------------------
 Allow return products with voucher in POS (This module need pos_return_voucher)
