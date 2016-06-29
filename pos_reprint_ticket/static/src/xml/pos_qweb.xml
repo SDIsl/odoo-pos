@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+
+    <t t-name="ButtonReprintWidget">
+        <span class="order-button pos-reprint-button">
+            <i class="fa fa-print"></i>Reprint Ticket
+        </span>
+    </t>
+
+    <t t-name="ReprintTicketScreen">
+        <div class="reprint-ticket-screen screen">
+            <section class="top-content">
+                <span class='button back'>
+                    <i class='fa fa-angle-double-left'></i>
+                    Cancel
+                </span>
+                <span class='searchbox'>
+                    <input placeholder='Search Orders'/>
+                    <span class='search-clear'></span>
+                </span>
+                <span class='searchbox'></span>
+            </section>
+            <section class="full-content">
+                <table class='order-list'>
+                    <thead>
+                        <tr>
+                            <th>Order name</th>
+                            <!--<th>Reference</th>-->
+                            <th>Date</th>
+                            <th>Customer</th>
+                            <th class="reprint-td-right">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody class='order-list-contents'>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </t>
+
+    <t t-name="reprint-order">
+        <tr class="order-line"
+            t-att-data-order-id="order.id"
+            t-att-data-partner-id="order.partner_id">
+
+            <td>
+                <t t-esc="order.name"/>
+            </td>
+            <!--<td><t t-esc="order.pos_reference"/></td>-->
+            <td>
+                <t t-esc="order.date_order"/>
+            </td>
+            <td>
+                <t t-if="order.partner_id[1]">
+                    <t t-esc="order.partner_id[1]"/>
+                </t>
+                <t t-if="!order.partner_id[1]">
+                    <span>Unknown Customer</span>
+                </t>
+            </td>
+            <td class="reprint-td-right">
+                <t t-esc="widget.format_currency(order.amount_total)"/>
+            </td>
+        </tr>
+    </t>
+
+    <t t-name="SelectReprintOption">
+        <div class="modal-dialog">
+            <div class="popup popup-reprint">
+                <div class="reprint-title">Reprint Ticket</div>
+                <div class="conttent-container container-btn-cancel"></div>
+                <div class="content-container reprint-ticket-buttons">
+                    <ul>
+                        <li class="button btn-reprint-ticket"><i class="fa fa-print"></i> Ticket</li>
+                        <li class="button btn-reprint-gift-ticket"><i class="fa fa-print"></i> Gift Ticket</li>
+                        <li id="popup-reprint-cancel" class="button">Cancel</li>
+                    </ul>
+
+                </div>
+                <div class="content-container receipt-reprint scrollable-y touch-scrollable">
+
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

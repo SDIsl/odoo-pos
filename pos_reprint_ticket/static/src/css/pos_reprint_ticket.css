@@ -1,0 +1,118 @@
+
+.pos .reprint-ticket-screen .order-list {
+    font-size: 16px;
+    line-height: 40px;
+    width: 100%;
+    margin: 5px;
+    box-shadow: 1px 1px 2px lightgrey;
+}
+
+.pos .reprint-ticket-screen .order-list th,
+.pos .reprint-ticket-screen .order-list td {
+    padding: 0 8px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.pos .reprint-ticket-screen .order-list thead > tr {
+    background-color: rgb(110, 200, 155);
+    color: ghostwhite;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+
+.pos .reprint-ticket-screen .order-list tr:nth-child(even) {
+    background-color: #d2d2d2;
+}
+
+.pos .reprint-ticket-screen .order-list tr .reprint-td-right {
+    text-align: right;
+}
+
+.pos .reprint-ticket-screen .order-list .order-line {
+    cursor: pointer;
+}
+
+/*.pos .reprint-ticket-screen .order-list .order-line:hover{
+    background-color: #7F82AC;
+    color: ghostwhite;
+}*/
+
+.pos .reprint-ticket-screen .order-list {
+    text-align: center;
+}
+
+/******************popup reprint*****************************/
+
+.pos .modal-dialog .popup-reprint {
+    margin-left: 0;
+    margin-top: 0;
+    left: 30%;
+    width: 600px;
+    top: 10%;
+    height: 600px;
+    overflow: hidden;
+}
+
+/**button order-selector*/
+.pos .pos-reprint-button {
+    background-color: rgb(110, 200, 155);
+    color: ghostwhite;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/**buttons container*/
+.pos .content-container.reprint-ticket-buttons {
+    width: 200px;
+    float: left;
+    margin: 15px 0px 5px 0px;
+    box-shadow: 1px 1px 2px gray;
+    padding-left: 5px;
+}
+
+/**receipt reprint block*/
+.pos .content-container.receipt-reprint {
+    width: 360px;
+    height: 90%;
+    float: right;
+    margin: 15px 0px 5px 0px;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 2px gray;
+}
+
+.pos .content-container.receipt-reprint .pos-sale-ticket {
+    margin: 5px;
+}
+
+/**button cancel container*/
+.pos .conttent-container.container-btn-cancel {
+    width: 100%;
+    float: left;
+    border: 1px solid rgb(110, 200, 155);
+    margin-top: 5px;
+}
+
+/**buttons reprint*/
+.pos .button.btn-reprint-gift-ticket,
+.pos .button.btn-reprint-ticket,
+.pos #popup-reprint-cancel {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    float: none;
+    border-radius: 5px;
+
+}
+
+.pos .button.btn-reprint-ticket {
+    margin-bottom: 15px;
+}
+
+.pos #popup-reprint-cancel {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

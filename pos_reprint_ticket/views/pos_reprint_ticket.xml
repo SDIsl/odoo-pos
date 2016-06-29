@@ -1,0 +1,19 @@
+<openerp>
+    <data>
+
+        <template id="assets_backend" name="pos_reprint_assets"
+                  inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script src="/pos_reprint_ticket/static/src/js/pos_reprint_ticket.js"
+                        type="text/javascript"></script>
+            </xpath>
+        </template>
+
+        <template id="index_pos_reprint_ticket" name="POS Reprint Tickets Styles" inherit_id="point_of_sale.index">
+            <xpath expr="//head" position="inside">
+                <link rel="stylesheet" href="/pos_reprint_ticket/static/src/css/pos_reprint_ticket.css"/>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>
