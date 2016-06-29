@@ -27,3 +27,7 @@ This module override *posticket* and *xmlreceipt* for add simplified invoice str
 pos_sub_menu_widget
 -------------------
 Complement styles for pos_return_voucher & pos_return_products
+
+pos_synchronize_order_control
+------------------------------
+This module to lock push_order method, when user click several times to the synchronize button

@@ -1,0 +1,13 @@
+<openerp>
+    <data>
+        <template id="pos_synchronize_order_control_assets"
+                  name="pos_synchronize_order_control_assets"
+                  inherit_id="web.assets_backend">
+
+            <xpath expr="." position="inside">
+                <script src="/pos_synchronize_order_control/static/src/js/widgets.js"
+                        type="text/javascript"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>
