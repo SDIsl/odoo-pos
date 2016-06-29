@@ -11,7 +11,7 @@ This module automatically reconciles invoiced orders (close session)
 
 pos_product_available_extend
 ----------------------
-This module 
+This module extends from pos_product_available, include extra features (Tooltips, Quantity Available, Incoming in product variants)
 
 pos_return_products
 --------------------

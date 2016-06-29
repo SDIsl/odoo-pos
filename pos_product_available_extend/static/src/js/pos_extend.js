@@ -1,5 +1,4 @@
 openerp.pos_product_available_extend = function (instance) {
-    //$('<link rel="stylesheet" href="/pos_product_available_extend/static/src/css/pos_extend.css"/>').appendTo($("head"));
     var module = instance.point_of_sale;
     var PosModelSuper = module.PosModel
     var _t = instance.web._t;
@@ -49,7 +48,7 @@ openerp.pos_product_available_extend = function (instance) {
                 var product_ui = product_list_ui[i];
 
                 //tooltip stock available
-                $(product_ui).find('.qty-tag').attr('data-original-title', _('Available'));
+                $(product_ui).find('.qty-tag').attr('data-original-title', _t('Available'));
                 $(product_ui).find('.qty-tag').attr('data-toggle', 'tooltip');
                 $(product_ui).find('.qty-tag').tooltip({
                     delay: {
@@ -59,7 +58,7 @@ openerp.pos_product_available_extend = function (instance) {
                 });
 
                 //tooltip stock incoming
-                $(product_ui).find('.incoming-qty').attr('data-original-title', _('Incoming'));
+                $(product_ui).find('.incoming-qty').attr('data-original-title', _t('Incoming'));
                 $(product_ui).find('.incoming-qty').attr('data-toggle', 'tooltip');
                 $(product_ui).find('.incoming-qty').tooltip({
                     delay: {
@@ -94,7 +93,7 @@ openerp.pos_product_available_extend = function (instance) {
 
 
                 /*tooltip stock qty available*/
-                $(variant_node).find('.qty-tag').attr('data-original-title', 'Disponible');
+                $(variant_node).find('.qty-tag').attr('data-original-title', _t('Available'));
                 $(variant_node).find('.qty-tag').attr('data-toggle', 'tooltip');
                 $(variant_node).find('.qty-tag').tooltip({
                     delay: {
@@ -108,7 +107,7 @@ openerp.pos_product_available_extend = function (instance) {
                 var variant = this.pos.db.get_product_by_id(variant_id);
                 if (variant.incoming_qty > 0) {
 
-                    $(variant_node).find('.incoming-qty').attr('data-original-title', 'Por recibir');
+                    $(variant_node).find('.incoming-qty').attr('data-original-title', _t('Incoming'));
                     $(variant_node).find('.incoming-qty').attr('data-toggle', 'tooltip');
                     $(variant_node).find('.incoming-qty').tooltip({
                         delay: {
