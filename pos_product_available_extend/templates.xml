@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend_extend1" name="pos assets"
+                  inherit_id="point_of_sale.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript"
+                        src="/pos_product_available_extend/static/src/js/pos_extend.js"></script>
+            </xpath>
+        </template>
+
+        <template id="assets_backend_extend2" name="sdi assets"
+                  inherit_id="point_of_sale.index">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet"
+                      href="/pos_product_available_extend/static/src/css/pos_extend.css"/>
+            </xpath>
+        </template>
+    </data>
+</openerp>

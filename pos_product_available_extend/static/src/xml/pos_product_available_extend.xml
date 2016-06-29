@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-extend="Product">
+		<t t-jquery=".product-img" t-operation="append">
+			<t t-if="product.incoming_qty gt 0">
+				<span t-attf-class="incoming-qty">
+					<t t-esc="product.incoming_qty"/>
+				</span>
+			</t>
+		</t>
+	</t>
+
+	<t t-extend="VariantWidget">
+		<t t-jquery=".variant-header" t-operation="replace">
+			<t t-if="!variant.to_weight">
+				<t t-if="widget.pos.config.display_price_with_taxes">
+					<span class="price-tag">
+						<t t-esc="widget.format_currency(variant.price_with_taxes,'Product Price')"/>
+					</span>
+				</t>
+				<t t-if="!widget.pos.config.display_price_with_taxes">
+					<span class="price-tag">
+						<t t-esc="widget.format_currency(variant.price,'Product Price')"/>
+					</span>
+				</t>
+
+			</t>
+			<t t-if="variant.to_weight">
+				<t t-if="widget.pos.config.display_price_with_taxes">
+					<span class="price-tag">
+						<t t-esc="widget.format_currency(variant.price_with_taxes,'Product Price')+'/Kg'"/>
+					</span>
+				</t>
+				<t t-if="!widget.pos.config.display_price_with_taxes">
+					<span class="price-tag">
+						<t t-esc="widget.format_currency(variant.price,'Product Price')+'/Kg'"/>
+					</span>
+				</t>
+			</t>
+
+			<span t-attf-class="qty-tag #{variant.qty_available lte 0 ? 'not-available':''}">
+				<t t-esc="variant.qty_available"/>
+			</span>
+
+			<t t-if="variant.incoming_qty gt 0">
+				<span t-attf-class="incoming-qty">
+					<t t-esc="variant.incoming_qty"/>
+				</span>
+			</t>
+		</t>
+	</t>
+
+</templates>
