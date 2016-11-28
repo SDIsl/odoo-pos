@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend_pos_fix_compute_all" name="assets_backend_pos_fix_compute_all"
+                  inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script src="/pos_fix_compute_all/static/src/js/pos.js"
+                        type="text/javascript"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>
